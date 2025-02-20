@@ -13,12 +13,12 @@ O **SimularCred** foi criado com o intuito de **ensinar educação financeira** 
 
 ## ✨ Funcionalidades
 
-- ** Simulação de financiamento bancário simplificado.
-- ** Interface intuitiva e acessível para públicos com pouca familiaridade digital.
-- ** Perguntas básicas sobre crédito e financiamento.
-- ** Links fictícios para compreensão do funcionamento de financiamentos.
-- ** Os dados são armazenados no banco de maneira superficial apenas para demonstração, sem retenção de informações de usuários.
-- ** Versão mobile disponível no aplicativo Expo Go para visualização das telas e funcionalidades.
+- Simulação de financiamento bancário simplificado.
+- Interface intuitiva e acessível para públicos com pouca familiaridade digital.
+- Perguntas básicas sobre crédito e financiamento.
+- Links fictícios para compreensão do funcionamento de financiamentos.
+- Os dados são armazenados no banco de maneira superficial apenas para demonstração, sem retenção de informações de usuários.
+- Versão mobile disponível no aplicativo Expo Go para visualização das telas e funcionalidades.
 
 ## 📂 Estrutura do Projeto
 ```
