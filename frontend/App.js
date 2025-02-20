@@ -239,21 +239,26 @@ const styles = StyleSheet.create({
     backgroundColor: "#F5F5F5",
     alignItems: "center",
     justifyContent: "flex-start",
-    widht: 100%
+    width: "100%", 
   },
+
   headerContainer: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "center", 
     marginBottom: 20,
+    width: "100%",
   },
+
   headerImage: {
     width: 70,
     height: 70,
-    borderRadius: 35, // Mantém circular
+    borderRadius: 35, 
     marginRight: 15,
-    resizeMode: "cover",
+    resizeMode: "row",
   },
 
+ 
   titulo: {
     fontSize: 60, 
     fontWeight: "bold",
@@ -261,43 +266,64 @@ const styles = StyleSheet.create({
     color: "#4A235A",
     marginBottom: 10,
     textTransform: "uppercase",
-    alignSelf: "center", 
+    textAlign: "center", 
+    alignSelf: "center",
+    width: "100%", 
   },
 
-
   header: {
-    fontSize: 40,
+    fontSize: 35,
     fontWeight: "700",
-    alignSelf: "flex-start",
     color: "#4A235A",
     fontFamily: "sans-serif-medium",
-    marginLeft: 20, 
-    marginBottom: 15, 
-    paddingVertical: 5, 
+    marginBottom: 15,
+    paddingVertical: 5,
+    textAlign: "left", 
+    alignSelf: "flex-end",
+    width: "90%", 
   },
 
   label: {
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: "bold",
     fontFamily: "sans-serif-medium",
     color: "#333",
     marginBottom: 10,
     textTransform: "uppercase",
     alignSelf: "flex-start",
+    width: "90%", 
   },
+
+  
+  buttonContainer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    marginTop: 20, 
+  },
+  
+  buttonRowContainer: {
+    flexDirection: "row", 
+    justifyContent: "space-between", 
+    alignItems: "center",
+    width: "90%", 
+    maxWidth: 400,
+    marginTop: 20, 
+  },
+
 
   button: {
     backgroundColor: "#6C3483",
-    paddingVertical: 20,
-    paddingHorizontal: 40,
-    borderRadius: 30, // Mantém arredondado
-    alignItems: "flex-end",
-    justifyContent: "space-between",
-    width: "80%", 
-    maxWidth: 300, 
-    marginVertical: 10,
+    paddingVertical: 15,
+    paddingHorizontal: 20, /
+    borderRadius: 30,
+    alignItems: "center",
+    justifyContent: "center",
+    flex: 1, 
+    marginHorizontal: 10, 
     shadowColor: "#000",
-    shadowOffset: { width: 3, height: 2 },
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4,
     elevation: 3,
@@ -309,6 +335,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     textTransform: "uppercase",
     letterSpacing: 1,
+    textAlign: "center",
   },
 
   input: {
@@ -319,7 +346,8 @@ const styles = StyleSheet.create({
     marginBottom: 18,
     backgroundColor: "#FFF",
     color: "#333",
-    width: "100%", 
+    width: "90%", 
+    maxWidth: 400, // Evita que fique muito largo
     textAlign: "center",
     fontSize: 18,
     shadowColor: "#000",
@@ -337,8 +365,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     backgroundColor: "#FFF",
     color: "#333",
-    width: "100%", 
+    width: "90%", 
+    maxWidth: 400,
   },
+
 
   link: {
     fontSize: 19,
@@ -349,29 +379,23 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 
-  buttonContainer: {
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 30,
-    width: "100%",
-  },
-
   resultContainer: {
     width: "100%",
-    alignItems: "flex-start",
+    alignItems: "flex-start", 
     padding: 25,
-    paddingLeft: 30, 
+    paddingLeft: 30, /
     marginTop: 10,
   },
 
   resultText: {
     fontSize: 20,
     fontWeight: "500",
-    textAlign: "left", 
+    textAlign: "center",
     color: "#4A235A",
     marginBottom: 20,
     paddingHorizontal: 30,
     lineHeight: 26,
+    width: "90%",
+    maxWidth: 600, // Mantém um limite de largura
   },
 });
