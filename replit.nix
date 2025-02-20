@@ -1,3 +1,7 @@
 { pkgs }: {
-  deps = [];
+  deps = [
+    pkgs.lsof
+    pkgs.dig
+    pkgs.nvi
+  ];
 }
