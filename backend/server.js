@@ -15,13 +15,15 @@ const PORT = process.env.PORT || 4000;
 console.log("MONGO_URI carregado:", process.env.MONGO_URI);
 
 mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("Conectado ao MongoDB"))
-  .catch((error) => console.error("Erro ao conectar ao MongoDB:", error));
+    .connect(process.env.MONGO_URI)
+    .then(() => console.log("Conectado ao MongoDB"))
+    .catch((error) => console.error("Erro ao conectar ao MongoDB:", error));
 
-app.listen(PORT, () => console.log(`Backend rodando em http://localhost:${PORT}`));
+app.listen(PORT, () =>
+    console.log(`Backend rodando em http://localhost:${PORT}`),
+);
 
-// ✅ Rota 1: Criar simulação (Etapa 1 - Dados do Imóvel)
+// Rota 1: Criar simulação (Etapa 1 - Dados do Imóvel)
 app.post("/simulations/step1", async (req, res) => {
     console.log("Recebendo dados na Etapa 1:", req.body);
 
@@ -29,7 +31,9 @@ app.post("/simulations/step1", async (req, res) => {
 
     if (!pessoa || !tipoImovel || !valorImovel || !localizacao) {
         console.log("Erro: Dados faltando na Etapa 1");
-        return res.status(400).json({ message: "Todos os campos são obrigatórios!" });
+        return res
+            .status(400)
+            .json({ message: "Todos os campos são obrigatórios!" });
     }
 
     try {
@@ -43,7 +47,10 @@ app.post("/simulations/step1", async (req, res) => {
         await simulation.save();
 
         console.log("Simulação criada e salva no MongoDB:", simulation);
-        res.json({ message: "Dados do imóvel registrados com sucesso!", simulation });
+        res.json({
+            message: "Dados do imóvel registrados com sucesso!",
+            simulation,
+        });
     } catch (error) {
         console.error("Erro ao salvar a simulação:", error);
         res.status(500).json({ message: "Erro ao salvar a simulação", error });
@@ -84,6 +91,7 @@ app.post("/simulations/step2/:simulationId", (req, res) => {
         simulation,
     });
 });
+
 // Rota 3: Obter todas as simulações
 app.get("/simulations", (req, res) => {
     res.json(simulations);
@@ -156,4 +164,3 @@ app.post("/simulations/reset/:simulationId", (req, res) => {
     simulations[simulationIndex] = { id: simulationId, etapa: 1 };
     res.json({ message: "Simulação reiniciada com sucesso!" });
 });
-
